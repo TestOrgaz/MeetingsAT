@@ -1,0 +1,16 @@
+{
+  "creator2": {
+    "firstName": "ATest",
+    "lastName": "BCreator2",
+    "phone": "375291111111",
+    "email": "qsw123s@mailinator.com",
+    "password": "123456"
+  },
+  "creator3": {
+    "firstName": "ATest",
+    "lastName": "ACreator3",
+    "phone": "375291111111",
+    "email": "creator3.test.automation@mailinator.com",
+    "password": "12345678"
+  }
+}

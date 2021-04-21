@@ -1,0 +1,89 @@
+{
+  "chrome": {
+    "windows": {
+      "args": [
+        "start-maximized",
+        "no-sandbox",
+        "disable-gpu",
+        "disable-extensions",
+        "use-fake-device-for-media-stream",
+        "use-fake-ui-for-media-stream"
+      ],
+      "experimentalOptions": {
+        "excludeSwitches": [
+          "disable-component-update",
+          "disable-popup-blocking"
+        ],
+        "prefs": {
+          "download.prompt_for_download": false,
+          "download.directory_upgrade": true,
+          "safebrowsing.enabled": true
+        }
+      }
+    },
+    "mac os": {
+      "args": [
+        "no-sandbox",
+        "disable-setuid-sandbox",
+        "disable-dev-shm-usage",
+        "disable-gpu",
+        "window-size=1920,1080",
+        "disable-web-security",
+        "use-fake-device-for-media-stream",
+        "use-fake-ui-for-media-stream",
+        "ppapi-flash-version=32.0.0.255",
+        "ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so"
+      ],
+      "experimentalOptions": {
+        "excludeSwitches": [
+          "disable-component-update",
+          "disable-popup-blocking"
+        ],
+        "prefs": {
+          "download.prompt_for_download": false,
+          "download.directory_upgrade": true,
+          "safebrowsing.enabled": true
+        }
+      }
+    },
+    "linux": {
+      "args": [
+        "no-sandbox",
+        "disable-setuid-sandbox",
+        "disable-dev-shm-usage",
+        "disable-gpu",
+        "window-size=1920,1080",
+        "disable-web-security",
+        "use-fake-device-for-media-stream",
+        "use-fake-ui-for-media-stream",
+        "ppapi-flash-version=32.0.0.255",
+        "ppapi-flash-path=/usr/lib/pepperflashplugin-nonfree/libpepflashplayer.so"
+      ],
+      "experimentalOptions": {
+        "excludeSwitches": [
+          "disable-component-update",
+          "disable-popup-blocking"
+        ],
+        "prefs": {
+          "download.prompt_for_download": false,
+          "download.directory_upgrade": true,
+          "safebrowsing.enabled": true
+        }
+      }
+    }
+  },
+  "firefox": {
+    "windows": {
+      "args": [
+        "--kiosk",
+        "-no-remote"
+      ]
+    },
+    "linux": {
+      "args": [
+        "--kiosk",
+        "-no-remote"
+      ]
+    }
+  }
+  }

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Meetings" configfailurepolicy="continue">
+    <test name="Регистрация">
+        <groups>
+            <run>
+                <include name="all"/>
+                <include name="elma"/>
+                <include name="admin"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.meetings.RegistrationTests"/>
+        </classes>
+    </test>
+</suite>

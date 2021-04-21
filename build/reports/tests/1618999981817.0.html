@@ -1,0 +1,844 @@
+<html class="koHtml"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#000000"><link rel="manifest" href="/manifest.json"><title>Вход - Webinar</title><script type="text/javascript" async="" src="https://widget.intercom.io/widget/l3pnr03j"></script><script type="text/javascript" src="/config.js"></script><script type="text/javascript" src="/analytics.js"></script><link href="/static/css/main.792b4c04.chunk.css" rel="stylesheet"><style type="text/css">.PieChart-module__root___2 {
+  display: flex;
+  align-items: center; }
+
+@media (max-width: 840px) {
+  .PieChart-module__root___2 {
+    flex-direction: column; } }
+
+.PieChart-module__chartContainer___2 {
+  position: relative; }
+  .PieChart-module__chartContainer___2 > canvas {
+    display: block; }
+
+.PieChart-module__label___2 {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  padding: 0 30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  text-align: center; }
+  .PieChart-module__label___2 h1 {
+    font-size: 48px;
+    line-height: 50px;
+    font-weight: 100; }
+
+.PieChart-module__labelText___3 {
+  word-wrap: break-word;
+  max-height: 50px;
+  overflow: hidden; }
+  .PieChart-module__labelText___3 > a {
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+
+.PieChart-module__legend___B {
+  margin-left: 35px; }
+  .PieChart-module__legend___B h3 {
+    font-size: 18px;
+    font-weight: 100;
+    margin-bottom: 15px; }
+
+@media (max-width: 840px) {
+  .PieChart-module__legend___B {
+    margin: 25px 0 0 0; } }
+
+.PieChart-module__legendItem___3 {
+  display: flex;
+  align-items: center; }
+  .PieChart-module__legendItem___3 + .PieChart-module__legendItem___3 {
+    margin-top: 10px; }
+
+.PieChart-module__legendItemData___3 {
+  flex-shrink: 0;
+  width: 35px;
+  margin-right: 10px; }
+</style><style type="text/css">.TestResultsView-module__table___2 {
+  width: 100%;
+  font-size: inherit;
+  font-family: inherit;
+  color: black; }
+  .TestResultsView-module__table___2 .TestResultsView-module__name___1 {
+    display: flex;
+    align-items: center; }
+  .TestResultsView-module__table___2 .TestResultsView-module__avatar___1 {
+    margin-right: 16px;
+    width: 40px;
+    height: 40px;
+    background-color: #e3e3e3;
+    border-radius: 50%;
+    line-height: 1;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .TestResultsView-module__table___2 th {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 400;
+    color: #919191;
+    border-bottom: 1px solid #ccc; }
+  .TestResultsView-module__table___2 td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .TestResultsView-module__table___2 .TestResultsView-module__clickable___1 {
+    cursor: pointer; }
+</style><style type="text/css">.VotingResultsView-module__chart___2 + .VotingResultsView-module__chart___2 {
+  margin-top: 40px; }
+
+.VotingResultsView-module__preview___3 {
+  position: absolute;
+  width: 170px;
+  height: 100px;
+  z-index: 10000;
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat; }
+</style><style data-jss="" data-meta="MuiCssBaseline">
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+strong, b {
+  font-weight: 700;
+}
+body {
+  color: rgba(0, 0, 0, 0.87);
+  margin: 0;
+  font-size: 0.875rem;
+  font-family: AktivGrotesk, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  background-color: #fafafa;
+}
+@media print {
+  body {
+    background-color: #fff;
+  }
+}
+body::backdrop {
+  background-color: #fafafa;
+}
+</style><link rel="stylesheet" type="text/css" href="/static/css/4.72158634.chunk.css"><script charset="utf-8" src="/static/js/4.fd34cf84.chunk.js"></script><link rel="stylesheet" type="text/css" href="/static/css/3.a32ea54f.chunk.css"><script charset="utf-8" src="/static/js/3.e9b0e832.chunk.js"></script><link rel="shortcut icon" href="/images/favicon-32x32.ico" type="image/x-icon"><link rel="shortcut icon" href="/images/favicon-16x16.png" type="image/png"><link rel="icon" href="/images/favicon-16x16.png" type="image/png" sizes="16x16"><link rel="icon" href="/images/favicon-32x32.png" type="image/png" sizes="32x32"><link rel="icon" href="/images/favicon-96x96.png" type="image/png" sizes="96x96"><link rel="apple-touch-icon" href="/images/apple-touch-icon-57x57.png" type="image/png" sizes="57x57"><link rel="apple-touch-icon" href="/images/apple-touch-icon-60x60.png" type="image/png" sizes="60x60"><link rel="apple-touch-icon" href="/images/apple-touch-icon-72x72.png" type="image/png" sizes="72x72"><link rel="apple-touch-icon" href="/images/apple-touch-icon-76x76.png" type="image/png" sizes="76x76"><link rel="apple-touch-icon" href="/images/apple-touch-icon-114x114.png" type="image/png" sizes="114x114"><link rel="apple-touch-icon" href="/images/apple-touch-icon-120x120.png" type="image/png" sizes="120x120"><link rel="apple-touch-icon" href="/images/apple-touch-icon-144x144.png" type="image/png" sizes="144x144"><link rel="apple-touch-icon" href="/images/apple-touch-icon-152x152.png" type="image/png" sizes="152x152"><link rel="apple-touch-icon" href="/images/apple-touch-icon-180x180.png" type="image/png" sizes="180x180"></head><body data-bind="css:{
+    'with-brand': brandingStyles(),
+    'offset': bannerOpened(),
+    'no-scroll': router.noScrollPage(),
+    'without-min-width': router.currentPage() === 'onboarding-start'
+}" class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths with-brand" style="display: block;"><noscript>You need to enable JavaScript to run this app.</noscript><div id="root" class="reactRoot rootHidden"></div><script>!function(e){function t(t){for(var n,o,i=t[0],c=t[1],l=t[2],s=0,p=[];s<i.length;s++)o=i[s],Object.prototype.hasOwnProperty.call(a,o)&&a[o]&&p.push(a[o][0]),a[o]=0;for(n in c)Object.prototype.hasOwnProperty.call(c,n)&&(e[n]=c[n]);for(f&&f(t);p.length;)p.shift()();return u.push.apply(u,l||[]),r()}function r(){for(var e,t=0;t<u.length;t++){for(var r=u[t],n=!0,o=1;o<r.length;o++){var c=r[o];0!==a[c]&&(n=!1)}n&&(u.splice(t--,1),e=i(i.s=r[0]))}return e}var n={},o={1:0},a={1:0},u=[];function i(t){if(n[t])return n[t].exports;var r=n[t]={i:t,l:!1,exports:{}};return e[t].call(r.exports,r,r.exports,i),r.l=!0,r.exports}i.e=function(e){var t=[];o[e]?t.push(o[e]):0!==o[e]&&{3:1,4:1}[e]&&t.push(o[e]=new Promise((function(t,r){for(var n="static/css/"+({}[e]||e)+"."+{3:"a32ea54f",4:"72158634"}[e]+".chunk.css",a=i.p+n,u=document.getElementsByTagName("link"),c=0;c<u.length;c++){var l=(f=u[c]).getAttribute("data-href")||f.getAttribute("href");if("stylesheet"===f.rel&&(l===n||l===a))return t()}var s=document.getElementsByTagName("style");for(c=0;c<s.length;c++){var f;if((l=(f=s[c]).getAttribute("data-href"))===n||l===a)return t()}var p=document.createElement("link");p.rel="stylesheet",p.type="text/css",p.onload=t,p.onerror=function(t){var n=t&&t.target&&t.target.src||a,u=new Error("Loading CSS chunk "+e+" failed.\n("+n+")");u.code="CSS_CHUNK_LOAD_FAILED",u.request=n,delete o[e],p.parentNode.removeChild(p),r(u)},p.href=a,document.getElementsByTagName("head")[0].appendChild(p)})).then((function(){o[e]=0})));var r=a[e];if(0!==r)if(r)t.push(r[2]);else{var n=new Promise((function(t,n){r=a[e]=[t,n]}));t.push(r[2]=n);var u,c=document.createElement("script");c.charset="utf-8",c.timeout=120,i.nc&&c.setAttribute("nonce",i.nc),c.src=function(e){return i.p+"static/js/"+({}[e]||e)+"."+{3:"e9b0e832",4:"fd34cf84"}[e]+".chunk.js"}(e);var l=new Error;u=function(t){c.onerror=c.onload=null,clearTimeout(s);var r=a[e];if(0!==r){if(r){var n=t&&("load"===t.type?"missing":t.type),o=t&&t.target&&t.target.src;l.message="Loading chunk "+e+" failed.\n("+n+": "+o+")",l.name="ChunkLoadError",l.type=n,l.request=o,r[1](l)}a[e]=void 0}};var s=setTimeout((function(){u({type:"timeout",target:c})}),12e4);c.onerror=c.onload=u,document.head.appendChild(c)}return Promise.all(t)},i.m=e,i.c=n,i.d=function(e,t,r){i.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:r})},i.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.t=function(e,t){if(1&t&&(e=i(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var r=Object.create(null);if(i.r(r),Object.defineProperty(r,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var n in e)i.d(r,n,function(t){return e[t]}.bind(null,n));return r},i.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return i.d(t,"a",t),t},i.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},i.p="/",i.oe=function(e){throw console.error(e),e};var c=this["webpackJsonpwebinar-control-panel"]=this["webpackJsonpwebinar-control-panel"]||[],l=c.push.bind(c);c.push=t,c=c.slice();for(var s=0;s<c.length;s++)t(c[s]);var f=l;r()}([])</script><script src="/static/js/2.6676dd77.chunk.js"></script><script src="/static/js/main.ac31be0d.chunk.js"></script><iframe id="intercom-frame" style="position: absolute !important; opacity: 0 !important; width: 1px !important; height: 1px !important; top: 0 !important; left: 0 !important; border: none !important; display: block !important; z-index: -1 !important; pointer-events: none;" aria-hidden="true" tabindex="-1" title="Intercom"></iframe><div id="koContainer" class="koRoot">  <!-- ko if: brandingStyles() && !router.ignoreBrandingRoute() -->
+  <style rel="stylesheet" type="text/css" data-bind="text: brandingStyles">.koRoot .not-found-error .suggestion:hover .btn{background: #0a5c0d;}.koRoot .wbt2.wbt2-default.success{background-color: #0a5c0d;}.koRoot .wbt2.wbt2-default.success:hover{background-color: #084a0a;}.koRoot .wbt2.wbt2-default.success:active{background-color: #063307;}.koRoot .wbt2.wbt2-default.fail{background-color: #5f5f5f;}.koRoot .wbt2.wbt2-default.fail:hover{background-color: #565656;}.koRoot .wbt2.wbt2-default.fail:active{background-color: #4e4e4e;}.koRoot .wbt2.wb-link{color: #0a5c0d;;}.koRoot .wbt2.wb-link:hover{color: #084a0a;}.koRoot .wbt2.wb-link:active{color: #063307;}.koRoot .wbt2.wb-icon.success-icon .icon{color: #0a5c0d;}.koRoot .wbt2-group.success{background: #0a5c0d;}.koRoot .wbt2-group .wbt2-default{border-right: solid 1px #063307;}.koRoot .wb-add-lector .progress-bar{background: #0a5c0d;}.koRoot .modal-dialog.modal-event-people .w-last-webinars-item.w-last-webinars-item-selected{background-color: #5f5f5f;}.koRoot .modal-dialog.modal-event-people .dialog-body-top .select-field .dropdown-menu .active .icon{color: #0a5c0d;}.koRoot .modal-dialog.modal-files .aside-layout .content .dialog-body-wrapper .dialog-files-droparea{border: 1px #0f8513 solid;}.koRoot .modal-dialog.modal-files .dialog-body-top .select-field .dropdown-menu .active .icon{color: #0a5c0d;}.koRoot .b-tariff .tarif:hover .footer .pull-right a.btn{background: #0a5c0d;}.koRoot .b-icon-before:before{color: #0a5c0d;}.koRoot .b-progress-bar .fill{background: #0a5c0d;}.koRoot .business-brand .link-destroy{color: #5f5f5f;}.koRoot .business-brand .link-destroy:hover,.koRoot .business-brand .link-destroy:focus{color:#565656;}.koRoot .support-test .info-box.failed .info-image{background-color: #ec3939;color: #fff;}.koRoot .support-test .info-box.failed .info-subtitle{color: #ec3939;}.koRoot .support-test .select-field .icon-close{color: #ec3939;}.koRoot .support-test .audio-test .slider-range{background-color: #0c6e10;}.koRoot .support-test .audio-test .slider-handle{background-color: #0c6e10;}.koRoot .support-test #mic-off{background-color: #5f5f5f;color: #fff;}.koRoot .w-docs-aside-droparea{border: 1px #0c6e10 solid;}.koRoot #onboarding-dropdown ul li a.standart{color: #084a0a !important;}.koRoot #onboarding-dropdown .bg i{color: #084a0a;}.koRoot #onboarding-dropdown .bg .onboarding-progress .progressbar div{background: #084a0a;}.koRoot a,.koRoot input[type="submit"]{color: #084a0a;}.koRoot a:hover,.koRoot input[type="submit"]:hover,.koRoot a:focus,.koRoot input[type="submit"]:focus{color: #063708;}.koRoot a:active,.koRoot input[type="submit"]:active{color: #042005;}.koRoot .icon-star{color: #0c6e10}.koRoot .jq-checkbox.checked,.koRoot .jq-radio.checked,.koRoot .signin-social-link:hover,.koRoot .icon-s-vk:hover,.koRoot .w-btn:hover .icon-minus,.koRoot .w-btn:hover .icon-plus,.koRoot .w-btn:hover .icon-prev-lg,.koRoot .w-btn:hover .icon-next-lg,.koRoot .w-btn:hover .icon-draw,.koRoot .w-btn:hover .icon-text,.koRoot .w-btn:hover .icon-undo,.koRoot .w-btn:hover .icon-screen,.koRoot .w-btn:hover .icon-cursor,.koRoot .icon-volume,.koRoot .ui-resizable-handle,.koRoot .icon-check-line,.koRoot .icon-back,.koRoot .icon-calendar-round:hover,.koRoot .w-btn:hover .icon-move-drawing,.koRoot .w-btn:hover .icon-schreensharing-unfold,.koRoot .w-btn:hover .icon-schreensharing-fold,.koRoot .w-btn:hover .icon-eraser,.koRoot .ui-datepicker td span.ui-state-hover,.koRoot .ui-datepicker td a.ui-state-hover{color: #084a0a;}.koRoot .w-btn:active .icon-minus,.koRoot .w-btn:active .icon-plus,.koRoot .w-btn:active .icon-prev-lg,.koRoot .w-btn:active .icon-next-lg,.koRoot .w-btn:active .icon-draw{color: #063307;}.koRoot .icon-check-round.true{color: #084a0a;}.koRoot .ui-slider-vertical .ui-slider-range{background-color: #0c6e10;}.koRoot .w-brush-weight-slider .ui-slider-handle, .koRoot  .w-volume-slider .ui-slider-handle{background-color: #0c6e10;}.koRoot .navigation > a.is-active{background-color: #084a0a;}.koRoot .datepicker-field.is-valid{border-color: #0c6e10;}.koRoot .signin-form.is-invalid .input-field,.koRoot .signin-form.is-invalid .datepicker-field{border-color: #5f5f5f;}.koRoot .input-field.is-invalid, .koRoot  .datepicker-field.invalid, .koRoot  .textarea-field.is-invalid, .koRoot  .select-field.is-invalid{border-color: #5f5f5f;}.koRoot .switch-range{background-color: #5f5f5f;}.koRoot .is-checked .switch-range{background-color: #0c6e10;}.koRoot .input-field-tag.is-valid,.koRoot .tag-valid,.koRoot .tag:not(.tag-error):hover{background-color: #084a0a;}.koRoot .input-field-tag.is-invalid,.koRoot .tag-error{color: #FFFFFF;background-color: #5f5f5f;}.koRoot .ticket-status.active{color: #084a0a;}.koRoot .active .ticket-status-symbol{background-color: #084a0a;}.koRoot .active .ticket-status-symbol{background-color: #084a0a;}.koRoot .repeat-day.active{background-color: #084a0a;}.koRoot .user-checkbox.checked{background-color: #084a0a;}.koRoot .w-drop:hover{border-color: #084a0a;}.koRoot .folder.dragged-hover{border: 1px solid #0c6e10 !important;box-shadow: 0px 0px 0px 1px #0c6e10 !important;}.koRoot tr.dragged-hover{border: 2px solid #0c6e10 !important;}.koRoot tr.file-active td{background: #5f5f5f !important;}.koRoot a.folder.active,.koRoot .folder.active{background: #5f5f5f;color: #FFFFFF;}.koRoot a.file.file-selected,.koRoot .file.file-selected,.koRoot a.folder.file-selected,.koRoot .folder.file-selected{border: 1px solid #0a5c0d !important;box-shadow: 0px 0px 0px 2px #0a5c0d !important;}.koRoot .w-aside-drop.active .w-aside-drop-area{border: 2px dashed #084a0a;}.koRoot .folder-crumbs li{color: #084a0a}.koRoot .video-content .video-icon{background-color: #084a0a}.koRoot .w-toolbar-edit .w-frame-edit-tools .w-frame-edit-blocks{border: 2px solid #084a0a;}.koRoot .w-toolbar-edit .w-frame-edit-tools .w-frame-edit-blocks .w-frame-blind.empty-blind{border-left: 2px solid #084a0a;border-right: 2px solid #084a0a;}.koRoot .w-toolbar-edit .w-frame-edit-tools .w-frame-wrapper{border: 2px solid #084a0a;}.koRoot .w-body-test .w-prev-bg .w-prev-slider-zoom,.koRoot .w-body-test-create .w-prev-bg .w-prev-slider-zoom,.koRoot .w-body-i .w-prev-bg .w-prev-slider-zoom{border: 2px solid #084a0a;}.koRoot .w-page-slider.handle-active .ui-slider-range-min{background-color: #084a0a;}.koRoot .w-page-slider.handle-active .ui-state-active{background-color:#084a0a;}.koRoot .volume-dots .volume-dot-wrap .volume-dot{background-color: #084a0a;}.koRoot .ui-datepicker td span.ui-state-active,.koRoot .ui-datepicker td a.ui-state-active{background-color: #084a0a;}.koRoot #select-period .ui-datepicker .date-range-selected > .ui-state-active{background-color: #084a0a;}.koRoot .calendar-type a.is-active{color: #084a0a;}.koRoot .event-edit #w-action-ready{color: #084a0a !important;}.koRoot .event-edit #w-action-ready:hover{color: #063708 !important;}.koRoot .event-edit #w-action-ready:focus{color: #042505 !important;}.koRoot .ui-datepicker.datepicker-range .date-range-selected > .ui-state-active{background-color: #084a0a;}.koRoot .w-body-i .w-prev-bg .w-prev-slider-zoom img{border: 2px solid #084a0a;}.koRoot .file-download-btn:hover{color: #084a0a;}.koRoot .file-download-btn:active{color: #063307;}.koRoot .icon-green{color: #084a0a !important;}.koRoot .icon-green:hover{color: #063708 !important;}.koRoot .icon-green:active{color: #042005 !important;}.koRoot .w-btn:hover .icon-record-cancel{color: #084a0a;}.koRoot .dropdown-menu.onboarding li .icon{color: #084a0a;}.koRoot .dropdown-menu.onboarding .onboarding-progress .progressbar div{background: #084a0a;}.koRoot #onboarding-dropdown ul li a.standart{color: #084a0a !important;}.koRoot #onboarding-dropdown .bg i{color: #084a0a;}.koRoot #onboarding-dropdown .bg .onboarding-progress .progressbar div{background: #084a0a;}.koRoot button.wbt2.in-records.wbt2-default:hover{color: #063708;}.koRoot .wbt2.withIcon.in-records:hover{color: #063708;}.koRoot .text-btn-danger{color: #5f5f5f;}.koRoot .text-btn-danger:hover,.koRoot .text-btn-danger:focus{color: #565656;}.koRoot .btn.btn-danger.btn-danger-brandable{background-color: #5f5f5f;}.koRoot .btn.btn-danger.btn-danger-brandable:hover{background-color: #565656;}.koRoot button.wbt2.in-records.wbt2-default:hover{color: #063708;}.koRoot .wbt2.withIcon.in-records:hover{color: #063708;}.koRoot .btn-important{color: #FFFFFF !important;background-color: #0a5c0d;}.koRoot .btn-important:hover{background-color: #084a0a;}.koRoot .btn-important:active{background-color: #063307;}.koRoot .btn-destroy{background-color: #5f5f5f;color: #FFFFFF;}.koRoot .btn-destroy:hover{background-color: #565656;}.koRoot .btn-destroy:active{background-color: #4e4e4e;}.koRoot .is-invalid .form-field-note{color: #5f5f5f;opacity: 1;}.koRoot .file-drag .file-drag-col.col-green{background-color: #0a5c0d;}.koRoot .folder-info.folder-warning{background-color: #5f5f5f;color: #FFFFFF;}.koRoot .w-btn.off{background-color: #5f5f5f;background-color: rgba(236, 57, 57, 0.8);}.koRoot .w-btn.off:hover{background-color: #565656;}.koRoot .w-btn.on{background-color: #084a0a;}.koRoot .w-btn.on:hover{background-color: #063307 !important;}.koRoot .w-btn-group.expanded .w-btn.selected{background-color: #084a0a;}.koRoot .w-video-progress > .ui-slider-range{background-color: #0a5c0d;}.koRoot .w-video-progress > .ui-slider-handle{top: -8px;background-color: #0a5c0d;}.koRoot .w-video-progress > .ui-slider-handle:active{background-color: #063307;}.koRoot .msg .msg_warning{background-color: #5f5f5f;color: #FFFFFF;}.koRoot .msg_right .msg-body{background-color: #5f5f5f;color: #FFFFFF;}.koRoot .msg_right .msg-body:before{border-color: transparent transparent #505050 transparent;}.koRoot .msg.msg_answer .msg-body{background-color: #5f5f5f;color: #FFFFFF;}.koRoot .snackbar .snackbar-progress{background: #ff121a;background: linear-gradient(to right,  #ff121a 27%, #ff483a  36%, #000000 63%);filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6cb170', endColorstr='#3f4e40', GradientType=1);}.koRoot .snackbar .snackbar-progress-file .snackbar-progress-line{background-color: #084a0a;}.koRoot .snackbar.warning{background-color: #ec3939;background-color: rgba(236, 57, 57, 0.9);}.koRoot .user-wrapper.animate .user-animate{border: solid 3px #0a5c0d;box-shadow: 0px 0px 4px 3px #0a5c0d, inset 0px 0px 4px 3px #0a5c0d;}.koRoot .page a.text-btn:hover{color: #084a0a !important;}.koRoot .input-field-tag.wrong{background-color: #5f5f5f;color: #FFFFFF;}.koRoot .msg.msg_answer .msg_warning{background-color: #5f5f5f;color: #fff;}.koRoot .tag-removable:hover{background-color: #084a0a !important;color: #fff !important;}.koRoot .test-answers .jq-checkbox.radio:active,.koRoot .test-answers .jq-checkbox.radio.checked{color: #084a0a;}.koRoot .w-answer .w-answer-assess .radio-field.correct .jq-radio:active,.koRoot .w-answer .w-answer-assess .radio-field.correct .jq-radio.checked{color: #084a0a;}.koRoot .w-answer .w-answer-assess .radio-field.incorrect .jq-radio:active,.koRoot .w-answer .w-answer-assess .radio-field.incorrect .jq-radio.checked{color: #5f5f5f;}.koRoot .peoples-row.org-member-row.active{background: #5f5f5f;color: #fff;}.koRoot .btn-group .btn{border-right: 1px solid #084a0a;}.koRoot .event-plan-card .event-plan-card-default:hover .event-choice-image{background-color: #0a5c0d;}.koRoot .event-plan-card .event-plan-card-select .event-choice:hover .event-choice-image{background-color: #0a5c0d;}.koRoot .signin-form.special .recovery-field a,.koRoot .signin-form.special .signin-form-question a{color: #084a0a;}.koRoot .ob-animate{border: solid 3px #0a5c0d;box-shadow: 0px 0px 4px 3px #0a5c0d, inset 0px 0px 4px 3px #0a5c0d;}.koRoot .animate-block{box-shadow: 0px 0px 4px 3px #0a5c0d, inset 0px 0px 4px 3px #0a5c0d;}.koRoot .aside-nav li > a.is-active{background-color: #5f5f5f;}.koRoot .w-preloader .circle-img .spinner{background-image: url('/images/loader-gray.png');}.koRoot .w-folder.active{background: #5f5f5f;}@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx){.koRoot .w-preloader .circle-img .spinner{background-image: url("/images/loader-gray@2x.png");}}.koRoot .w-preloader.small .circle-img .spinner{background-image: url('/images/loader-small-gray.png');}@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx){.koRoot .w-preloader.small .circle-img .spinner{background-image: url("/images/loader-small-gray@2x.png");}}.koRoot .support-test .loader .load{background-image: url("/images/loader-gray.png");}.koRoot .w-content-holder .file-load{background-image: url("/images/loader-gray.png");}.koRoot .record-converting:after{background-image: url("/images/loader-small-gray.png");}.koRoot .transferProgress .active{background-image: url('/images/_loader-mini-gray.gif');}.koRoot .loading .spiner{background-image: url("/images/loader-gray.png") !important;}.koRoot .enter-page .record-processing:before{background-image: url("/images/loader-small-gray.png");}.koRoot .event-after-landing .record-processing:before{background-image: url("/images/loader-small-gray.png");}.koRoot .file-load-list-item-text:after{background-image: url("/images/loader-small-gray.png");}.koRoot .file-load-grid-item .file-load-grid-item-text:after{background-image: url("/images/loader-small-gray.png");}.koRoot .loader-wrapper .loader,.koRoot .file.file-disabled.load .file-load,.koRoot tr.file-disabled.load td:first-child:after{background-image:url("/images/loader-gray.png");}.koRoot tr.file-disabled.load td:first-child:after{background-image: url("/images/loader-small-gray.png");}.koRoot .ss-seting-loading .spiner{background-image:url("/images/loader-gray.png");}@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx){.koRoot .ss-seting-loading .spiner{background-image:url("/images/loader-gray@2x.png");background-size:auto auto;}.koRoot .support-test .loader .load{background-image: url("/images/loader-gray@2x.png");background-size:auto auto;}.koRoot .w-content-holder .file-load{background-image: url("/images/loader-gray@2x.png");background-size:auto auto;}.koRoot .record-converting:after{background-image: url("/images/loader-small-gray@2x.png");background-size:auto auto;}.koRoot .transferProgress .active{background-image: url('/images/_loader-mini-gray@2x.gif');background-size:auto auto;}.koRoot .loading .spiner{background-image: url("/images/loader-gray@2x.png") !important;background-size:auto auto;}.koRoot .enter-page .record-processing:before{background-image: url("/images/loader-small-gray@2x.png");background-size:auto auto;}.koRoot .event-after-landing .record-processing:before{background-image: url("/images/loader-small-gray@2x.png");background-size:20px 20px;}.koRoot .file-load-list-item-text:after{background-image: url("/images/loader-small-gray@2x.png");background-size:auto auto;}.koRoot .file-load-grid-item .file-load-grid-item-text:after{background-image: url("/images/loader-small-gray@2x.png");background-size:auto auto;}.koRoot .loader-wrapper .loader,.koRoot .file.file-disabled.load .file-load,.koRoot tr.file-disabled.load td:first-child:after{background-image:url("/images/loader-gray@2x.png");background-size:auto auto;}.koRoot tr.file-disabled.load td:first-child:after{background-image: url("/images/loader-small-gray@2x.png");background-size:auto auto;}}.koRoot .msg .msg_select{background-color: #333;}.koRoot .w-btn.on:hover{background-color: #063708;}.koRoot tr.file-disabled.file-active td{background-color: #8a8a8a !important;}.koRoot .selected .w-screen-preview{border: 2px solid #084a0a;}.koRoot .org-view-selector .wbt2.success span{color: #0a5c0d;}.koRoot .tariff-info .tariff-params .extended .pie-chart-label h1,.koRoot .tariff-info .tariff-params .extended .complex .pie-chart-label .epsilon{color: #0a5c0d !important;}.koRoot .tariff-info .tariff-params .extended{color: #0a5c0d;}.koRoot .tariff-info .icon-prev-lg{color: #0a5c0d;}.koRoot .tariff-info .icon-selected.checked{color: #0a5c0d;}.koRoot .table-team .dropdown-menu li i{color: #0a5c0d;}.koRoot .aside-layout-files .aside .aside-footer .dropdown-menu .add-module-link{color: #0a5c0d;}.koRoot .topbar-create .dropdown-menu li .add-module-link{color: #0a5c0d;}.koRoot .business-organization-edit-profile .steps .step.passed span{background: #0a5c0d;}.koRoot .business-organization-edit-profile .steps .step.passed a{color: #0a5c0d;}.koRoot .modal-enter-register-form .dashed{border-color: #0a5c0d;}.koRoot .modal-enter-register-form .dashed:hover{border-color:#084a0a;}.koRoot #tariff-summary-popup .icon-custom-info{color: #0a5c0d;}.koRoot #main-menu-dropdown .dropdown-menu .is-active{color: #0a5c0d;}.koRoot .mobile-video-view .w-btn.w-action-video-play-overlay{background-color: #0a5c0d;}.koRoot .file-preview-icon-button{background-color: #0a5c0d;}.koRoot .file-preview-icon-button:hover{background-color: #084a0a;}.koRoot .file-preview-icon-button:active{background-color: #063307;}</style>
+  <!-- /ko -->
+  <!-- ko if: !router.errorPage() && router.routeAvailable() -->
+
+  <!-- ko if: router.notPageForHidePanel() --><!-- /ko -->
+
+  <!-- ko component: {
+        name: 'community-popup',
+        params: {}
+      } --><!-- ko if: visible() && router.notPageForHidePanel --><!-- /ko --><!-- /ko -->
+
+  <!-- ko if: !!router.currentTopBar() -->
+  <!-- ko component: {
+              name: router.currentTopBar,
+              params: {
+                  context: router.currentTopBarContext,
+                  reAssignUser : router.reAssignUser
+              }
+          } --><div class="signin-background" data-bind="visible:signPage">
+    <img src="/images/background.jpg">
+</div>
+
+<div class="topbar topbar-transparent" data-bind="css: { 'topbar-transparent':signPage }">
+	<div class="container-fluid " data-bind="visible:signPage">
+		<div class="pull-right">
+			<div class="select-lang">
+				<div class="select-lang-current"><span class="select-lang-current-title" data-bind="text:langs.titleActiveLang">РУС</span><span class="select-lang-arrow"></span></div>
+				<ul class="select-lang-dropdown" data-bind="foreach: langs.locales">
+					<li data-bind="click: $parent.langs.switchLang, css:{active:$data.key == $parent.langs.locale().key}" class="active"><a href="#" class="select-lang-link" data-bind="text: $data.title">РУС</a></li>
+				
+					<li data-bind="click: $parent.langs.switchLang, css:{active:$data.key == $parent.langs.locale().key}"><a href="#" class="select-lang-link" data-bind="text: $data.title">ENG</a></li>
+				</ul>
+			</div>
+			<a data-link="signin" class="btn" data-bind="translation: 'signin_action_f2',
+				visible: currentPage() === 'signup-page',
+			    attr: { href: isCourses() ? '/courses/signin' : '/signin' }" href="/signin" style="display: none;">Войти</a>
+			<!-- ko if: config.show.signupButton --><!-- /ko -->
+		</div>
+		<a class="topbar-logo-new topbar-logo-new-alt" data-bind="css:{
+					'topbar-logo-new-alt': signPage
+					},
+					attr: {
+						title: l10n.getTranslation('title_company_name'),
+						href: isSuperBranding ? '/' : l10n.getTranslation('title_link')
+					}
+				" title="Webinar" href="/">
+			<span class="logo-new"></span>
+		</a>
+	</div>
+	<div class="container-fluid" data-bind="visible:!signPage()" style="display: none;">
+		<!-- ko if: isUser() -->
+			<!-- ko component: {
+				name: 'auser-nav',
+				params: {
+					showReviewItem: showReviewItem
+				}
+			} --><div class="nav auser-nav">
+    <!-- ko component: {
+            name: 'tariff-summary-popup',
+            params: {}
+        }--><!-- ko if: user() -->
+    <div id="tariff-summary-popup" class="nav-link" data-bind="jQEvent: {
+                                                        'shown.bs.dropdown': init
+                                                    }">
+        <a href="#" data-placement="bottom" data-toggle="dropdown" data-bind="tooltip: {textKey: 'dashboard_tooltip'}" class="icon-custom-gauge" data-original-title="Информация о тарифе" title=""></a>
+        <div class="dropdown-menu">
+            <!-- ko ifnot: ready() -->
+                <!-- ko component: { name: 'preloader'  }--><!-- ko template:{
+        if: show()
+         }-->
+    <div class="w-preloader" data-bind="css: {'small': small()}">
+        <div class="circle-img">
+            <div class="spinner fix-retina"></div>
+        </div>
+        <!-- ko if: title() --><!-- /ko -->
+    </div>
+<!-- /ko --><!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: ready() --><!-- /ko -->
+        </div>
+    </div>
+<!-- /ko -->
+
+<!-- /ko -->
+    <!-- ko component: {
+            name: 'board-list',
+            params: {}
+        }--><!-- ko if: onboardingDoneProcent() < 100 -->
+<div id="onboarding-dropdown" class="nav-link ob-board-list" data-bind="jQEvent: {
+            'shown.bs.dropdown': function(e){
+                $(this).find('.dropdown-menu .scrollable').jScrollPane();
+            }
+        }">
+      <a href="#" data-placement="bottom" data-toggle="dropdown" data-bind="tooltip: {textKey: 'onboarding_learning'}" data-class-key="onboarding" class="icon-custom-rocket-48" data-original-title="Обучение" title=""></a>
+    <div class="dropdown-menu-notify bg" style="display: none;">
+        <ul>
+            <li><a>
+                <i class="icon icon-checked show-icon"></i>
+                <span>---</span>
+            </a></li>
+        </ul>
+        <div class="onboarding-progress">
+            <div class="progressbar">
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown-menu dropdown-menu-notify onboarding" data-bind="css: {
+                second: tasksProc.descriptionIsShow
+            }">
+        <div class="scrollable">
+            <ul>
+                <!-- ko if: onboarding.tasks -->
+                    <!-- ko foreach: onboarding.tasks  -->
+                        <!-- ko if:  isVisible--><!-- /ko -->
+                    
+                        <!-- ko if:  isVisible-->
+                            <li class="dropdown-header" data-bind="css:{ispassed:isPassed}">
+                                <span data-bind="text: name">Выполните все задания и получите 2 Гб дополнительного места</span>
+                            </li>
+                            <!-- ko if: !isPassed() -->
+                                <!-- ko foreach: steps -->
+                                    <li><a href="" data-dbns="1" data-bind="click: $component.onboardingClickStep.bind({}, $parent), css:{ispassed:isPassed()}" class="ispassed">
+                                        <i class="icon icon-checked show-icon" data-bind="css: {
+                                            'show-icon': isPassed()
+                                        }"></i> <span data-bind="text: name">Вы зарегистрированы</span></a>
+                                    </li>
+                                
+                                    <li><a href="" data-dbns="1" data-bind="click: $component.onboardingClickStep.bind({}, $parent), css:{ispassed:isPassed()}">
+                                        <i class="icon icon-checked" data-bind="css: {
+                                            'show-icon': isPassed()
+                                        }"></i> <span data-bind="text: name">Обучающий вебинар</span></a>
+                                    </li>
+                                
+                                    <li><a href="" data-dbns="1" data-bind="click: $component.onboardingClickStep.bind({}, $parent), css:{ispassed:isPassed()}" class="ispassed">
+                                        <i class="icon icon-checked show-icon" data-bind="css: {
+                                            'show-icon': isPassed()
+                                        }"></i> <span data-bind="text: name">Заполнение профиля</span></a>
+                                    </li>
+                                
+                                    <li><a href="" data-dbns="1" data-bind="click: $component.onboardingClickStep.bind({}, $parent), css:{ispassed:isPassed()}" class="ispassed">
+                                        <i class="icon icon-checked show-icon" data-bind="css: {
+                                            'show-icon': isPassed()
+                                        }"></i> <span data-bind="text: name">Создание вебинара</span></a>
+                                    </li>
+                                
+                                    <li><a href="" data-dbns="1" data-bind="click: $component.onboardingClickStep.bind({}, $parent), css:{ispassed:isPassed()}">
+                                        <i class="icon icon-checked" data-bind="css: {
+                                            'show-icon': isPassed()
+                                        }"></i> <span data-bind="text: name">Запись вебинара</span></a>
+                                    </li>
+                                
+                                    <li><a href="" data-dbns="1" data-bind="click: $component.onboardingClickStep.bind({}, $parent), css:{ispassed:isPassed()}">
+                                        <i class="icon icon-checked" data-bind="css: {
+                                            'show-icon': isPassed()
+                                        }"></i> <span data-bind="text: name">Статистика вебинара</span></a>
+                                    </li>
+                                <!-- /ko -->
+                            <!-- /ko -->
+                        <!-- /ko -->
+                    
+                        <!-- ko if:  isVisible--><!-- /ko -->
+                    
+                        <!-- ko if:  isVisible--><!-- /ko -->
+                    
+                        <!-- ko if:  isVisible--><!-- /ko -->
+                    
+                        <!-- ko if:  isVisible--><!-- /ko -->
+                    
+                        <!-- ko if:  isVisible--><!-- /ko -->
+                    <!-- /ko -->
+                <!-- /ko -->
+            </ul>
+        </div>
+        <div class="right-info">
+            <div class="ri-header" data-dbns="1">
+                <a href="#" data-dbns="1" class="breadcrumbs-back" data-bind="click: tasksProc.descriptionIsShow.bind({}, false), translation: 'common_back'">Назад</a>
+            </div>
+            <div class="text">
+                <span data-bind="text: tasksProc.description().title">title</span>
+                <p data-bind="html: tasksProc.description().text">text</p>
+            </div>
+        </div>
+        <div class="onboarding-progress">
+            <div class="progressbar">
+                <div data-bind="style:{width: onboardingDoneProcent() + '%'}" style="width: 50%;"></div>
+            </div>
+            <div class="pull-left">
+                <span data-bind="translation: {key:'common_progress', params: {amount:onboardingDoneCount(), total:onboardingCount() }}">3 из 6</span>
+            </div>
+            <div class="pull-right" style="top: initial; right: 20px;"><a href="#" data-bind="translation: 'onboarding_skip_learning'">пропустить обучение</a></div>
+        </div>
+    </div>
+</div>
+<!-- /ko --><!-- /ko -->
+    <div class="nav-link">
+        <a href="#" data-bind="click: showHideSearchPage" class="icon icon-search"></a>
+    </div>
+    <!-- ko component: {
+            name: 'main-menu-popup',
+            params: {}
+        }--><div id="main-menu-dropdown" class="nav-link" data-bind="pushSimpleHint: { key: 'wsTrialAvailable', marginX: 22, marginY: 22, click: clickMenuHint, fixed: true }">
+    <a href="#" class="icon icon-menu" data-placement="bottom" data-toggle="dropdown" data-bind="
+           tooltip: {textKey: 'menu_profile_apps'},
+           pushHint:{
+               marginX: 10,
+               marginY: 11,
+               r: 23,
+               stage: !isMeetingsAccount() ? 2 : 1,
+               message: window.l10n.getTranslation('onboarding_manage_files_contacts_services'),
+               side: 'bottom',
+               key: !isMeetingsAccount() ? 'editPageStart' : 'meetingsEventList',
+               onboarding: isMeetingsAccount() ? { groupToken: 'meetingsList', stepToken: 'meetingMainMenu' } : undefined
+           }" data-original-title="Приложения" title=""></a>
+    <div class="dropdown-menu">
+        <!-- ko if: isCourseModuleEnabled() || wsTrial.requested() -->
+            <div class="block">
+                <a href="/courses" data-bind="translation: 'main_menu_courses', attr: { title: l10n.getTranslation('main_menu_courses_hint') }" title="Список курсов">Курсы</a>
+            </div>
+        <!-- /ko -->
+        <!-- ko if: courseTrialShow() && !wsTrial.requested() --><!-- /ko -->
+        <div class="block">
+            <a href="/" data-link="" data-bind="translation: isMeetingsAccount() ? 'main_menu_meetings' : 'main_menu_events',
+                                             attr: { title: l10n.getTranslation('main_menu_events_hint') },
+                                             css: { 'is-active': currentPage() === 'events-page' || currentPage() === 'event-edit' }" title="Список мероприятий">Вебинары</a>
+        </div>
+        <div class="block">
+            <a target="_blank" href="https://www.comdi.com?utm_source=webinar&amp;utm_capaign=lk_menu" data-bind="translation: 'main_menu_broadcast',
+               attr: { title: l10n.getTranslation('main_menu_broadcast') },
+               click: clickBroadcastHandler" title="Трансляции">Трансляции</a>
+        </div>
+        <ul>
+            <!-- ko foreach: menu -->
+                <li>
+                     <a data-bind="attr:{href:$data.url, title: l10n.getTranslation($data.hint)}, css: {'is-active': $parent.currentPage() === $data.page}" data-link="" href="/people" title="Адресная книга">
+                        <span class="navigation-title" data-bind="translation: $data.title">Люди</span>
+                         <!-- ko if: $data.url === '/people' -->
+                           <span class="data" data-bind="text: $parent.totalContacts">1043</span>
+                         <!-- /ko -->
+
+                         <!-- ko if: $data.url === '/files' --><!-- /ko -->
+                     </a>
+                </li>
+            
+                <li>
+                     <a data-bind="attr:{href:$data.url, title: l10n.getTranslation($data.hint)}, css: {'is-active': $parent.currentPage() === $data.page}" data-link="" href="/files" title="Файловый менеджер">
+                        <span class="navigation-title" data-bind="translation: $data.title">Файлы</span>
+                         <!-- ko if: $data.url === '/people' --><!-- /ko -->
+
+                         <!-- ko if: $data.url === '/files' -->
+                            <span class="data" data-bind="fileSize: $parent.fileSizeSpace">4 ГБ</span>
+                         <!-- /ko -->
+                     </a>
+                </li>
+            
+                <li>
+                     <a data-bind="attr:{href:$data.url, title: l10n.getTranslation($data.hint)}, css: {'is-active': $parent.currentPage() === $data.page}" data-link="" href="/statistics/visits/all" title="Отчеты о мероприятиях">
+                        <span class="navigation-title" data-bind="translation: $data.title">Статистика</span>
+                         <!-- ko if: $data.url === '/people' --><!-- /ko -->
+
+                         <!-- ko if: $data.url === '/files' --><!-- /ko -->
+                     </a>
+                </li>
+            
+                <li>
+                     <a data-bind="attr:{href:$data.url, title: l10n.getTranslation($data.hint)}, css: {'is-active': $parent.currentPage() === $data.page}" data-link="" href="/business/tariffs" title="Расширенные возможности">
+                        <span class="navigation-title" data-bind="translation: $data.title">Бизнес</span>
+                         <!-- ko if: $data.url === '/people' --><!-- /ko -->
+
+                         <!-- ko if: $data.url === '/files' --><!-- /ko -->
+                     </a>
+                </li>
+            <!-- /ko -->
+            <!-- ko if: dc.isOrganizationAdmin() -->
+            <li>
+                <a href="/sso-settings" data-bind="translation: 'base_nav_sso_settings', attr: { title: l10n.getTranslation('main_menu_sso_settings_hint') }" title="Настройки SSO">Настройки SSO</a>
+            </li>
+            <!-- /ko -->
+            <li>
+                <a href="https://learn.webinar.ru/" target="_blank" data-bind="attr: { title: l10n.getTranslation('main_menu_learning') }" title="Обучение">
+                    <span class="navigation-title" data-bind="translation: 'main_menu_learning'">Обучение</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /ko -->
+    <div id="dropdown-menu-notify" class="nav-link" data-bind="jQEvent: {
+                    'shown.bs.dropdown': function(e){
+                        $(this).find('.dropdown-menu').jScrollPane();
+
+                        processUnreadNotifications.call(this, e);
+                    },
+                    'jsp-scroll-y': processUnreadNotifications
+                }">
+        <a href="#" data-toggle="dropdown" data-placement="bottom" data-bind="tooltip: {textKey: 'menu_profile_notifications'}" data-class-key="notification" class="icon icon-notify" data-original-title="Оповещения" title=""></a>
+        <div class="nav-link-badge" data-bind="text: unreadNotifications(), visible: unreadNotifications() > 0" style="display: none;">0</div>
+        <ul class="dropdown-menu dropdown-menu-notify notification">
+            <li class="dropdown-header" data-bind="translation: 'notification_label'">Уведомления</li>
+            <div data-bind="foreach: notifications, notificationsScrollEnd: showMore">
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            
+                <li data-notification="" data-bind="openModal: {
+                                name: 'modal-view-notify',
+                                params: $data
+                            }"><a href="#" data-bind="css: {notify_unread: !$data.updateAt}"><!--
+                                ko if: $data.priority === $parent.urgent --><!-- /ko -->
+                                <!-- ko if: $data.template.name == "EMAIL_QUESTION" || $data.template.name == "EMAIL_QUESTION_COURSE" --><!-- /ko -->
+
+                                <!-- ko if: $data.template.name !== "EMAIL_QUESTION" && $data.template.name !== "EMAIL_QUESTION_COURSE" -->
+                                    <span data-bind="html: title">Достигнут лимит участников</span>
+                                <!-- /ko -->
+                            </a></li>
+            </div>
+        </ul>
+    </div>
+    <div id="dropdown-menu-profile" class="nav-link">
+        <a data-class-key="dropdown-menu-profile" data-placement="bottom" data-bind="tooltip: {textKey: 'menu_profile_profile'}" data-toggle="dropdown" style="background-color: #e9e9e9;color: #919191;" data-original-title="Профиль" title="">
+            <!-- ko component: {
+                name: 'user-display',
+                params: {
+                    data: user(),
+                    size: 's'
+                }
+            } --><div class="user-display user-size-s" data-bind="css: classes">
+    <div class="user-main">
+        <div class="user-avatar" data-bind="css: {'has-checkbox': check() !== null}, click: tryExpand">
+            <div class="user-avatar-bg" data-bind="visible: !photo()"></div>
+            <div class="user-initials" data-bind="
+                text: initials,
+                style: {
+                    visibility: photo() ? 'hidden' : '',
+                    top: initials() === '@' ? '-1px' : ''
+                }
+            ">AB</div>
+            <div class="user-photo" data-bind="
+                visible: photo() &amp;&amp; !check(),
+                style: {'background-image': photo() ? 'url(' + photo() + ')' : ''}
+            " style="display: none;"></div>
+            <!-- ko if: check() !== null && !disable() --><!-- /ko -->
+
+            <!-- ko if: radio() !== null && !disable() --><!-- /ko -->
+        </div>
+        <!-- ko if: showInfo --><!-- /ko -->
+    </div>
+    <!-- ko if: showDesc --><!-- /ko -->
+    <!-- ko if: expand --><!-- /ko -->
+
+    <!-- ko if: disable --><!-- /ko -->
+</div>
+<!-- /ko -->
+        </a>
+        <ul class="dropdown-menu dropdown-menu-profile">
+            <li><a href="#profile" data-bind="translation: 'menu_profile_profile',
+											   openModal: {
+											       name: 'edit-profile'
+											   }">Профиль</a></li>
+            <!-- ko if: config.show.tariffs -->
+                <li><a href="/business/tariffs" data-link="" data-bind="translation: 'menu_profile_pay'">Оплата</a></li>
+            <!-- /ko -->
+            <!-- ko if: showReviewItem && showReviewItem() --><!-- /ko -->
+            <!--<li><a href="#" data-bind="translation: 'menu_profile_update'"></a></li>-->
+                <li><a href="/support/test-webrtc" data-bind="translation: 'menu_profile_help'">Тест системы</a></li>
+            <!-- ko if: config.show.instructions && l10n.getTranslation('menu_profile_instructions') -->
+                <li><a href="https://webinar.ru/help/?utm_medium=platform&amp;utm_source=instructions&amp;utm_campaign=instructions_lk" target="_blank" data-bind="translation: 'menu_profile_instructions'">Инструкции</a></li>
+            <!-- /ko -->
+            <li><a href="#" data-bind="translation: 'menu_profile_exit', click: menuProfileList.exit">Выйти</a></li>
+        </ul>
+    </div>
+</div><!-- /ko -->
+		<!-- /ko -->
+		<a href="/" data-link="/" data-bind="attr: {title: l10n.getTranslation('title_company_name')}" class="topbar-logo-new" title="Webinar">
+			<!-- ko if: !isUser() || logo() === false --><!-- /ko -->
+			<!-- ko if: logo() -->
+				<img alt="" data-bind="attr: {src: logo().url}" src="https://alpha-storage.webinar.ru/api-storage/files/webinar/2021/02/05/b95818097cf43e484fe140e79bc63debf70789d914a668d1eaa7b80ca6a.png">
+			<!-- /ko -->
+		</a>
+		<!-- ko if: currentPage() === 'support-page' --><!-- /ko -->
+		<!-- ko if: isUser() -->
+			<!-- ko if: currentPage() === 'peoples-page' --><!-- /ko -->
+			<!-- ko if: currentPage() === 'files-page' --><!-- /ko -->
+			<!-- ko if: currentPage() === 'statistics-page' --><!-- /ko -->
+			<!-- ko if: currentPage() === 'data-transfer-page' --><!-- /ko -->
+			<!-- ko if: currentPage() === 'business-page' --><!-- /ko -->
+			<!-- ko if: actualModal() --><!-- /ko -->
+			<!-- ko if: !actualModal() -->
+				<!-- ko if: currentPage() === 'files-page' --><!-- /ko -->
+				<!-- ko if: currentPage() === 'events-page' --><!-- /ko -->
+			<!-- /ko -->
+			<!-- ko if: !signPage() --><!-- /ko -->
+		<!-- /ko -->
+	</div>
+</div>
+<div class="topbar-fix"></div>
+<!-- /ko -->
+  <!-- /ko -->
+  <!-- ko if: !!router.currentPage() -->
+  <!-- ko component: {
+              name: router.currentPage,
+              params: {}
+          } --><div class="signin-container container-fluid">
+    <div class="signin-form special">
+        <form id="sign-in" method="" action="">
+            <div class="signin-form-header">
+                <!-- ko if: config.show.socialNetworks --><!-- /ko -->
+                <h2 data-bind="translation: 'sigin_page_title'">Вход</h2>
+            </div>
+            <!--  ko component:{
+                   name: 'text',
+                   params: {
+                       value: loginForm.data.email,
+                       title: l10n.getTranslation('common_email'),
+                       label: l10n.getTranslation('common_email_enter'),
+                       name: 'e-mail',
+                       type: 'email',
+                       error: loginForm.errors.email,
+                       errorHtml: true,
+                       onFocusoutCallback: loginForm.checkField
+                   }
+               } --><div class="input-field form-field is-charged is-invalid" data-bind="
+        css: {
+            'form-field': !field.noff,
+            'is-invalid': field.error,
+            'is-charged': field.value,
+            'big-size': params.big,
+            'long-error': !ignoreLongError &amp;&amp; field.error() &amp;&amp; field.error().length > 50
+        },
+        focusOutCheck: {
+            field: field
+        }">
+    <label class="name-field" data-bind="text: field.title, attr:{'for': field.name }" for="e-mail">Электронная почта</label>
+    <label class="helper-field" data-bind="text: field.label, attr:{'for': field.name }" for="e-mail">Введите электронную почту</label>
+    <!-- ko if: field.hint() --><!-- /ko -->
+    <!-- ko if: field.type() === 'password' --><!-- /ko -->
+    <!-- ko if: field.type() !== 'password' -->
+    <input data-bind="
+            attr:{'id': field.name,
+                  'name': field.name,
+                  'type': field.type() || 'text',
+                  'readonly': field.readonly() ? 'readonly' : null,
+                  'autocomplete': params.withoutAutoFill ? 'off' : (params.autofill || '')},
+            event:{'keypress':field.keypress, 'keyup':field.keyup, 'change': field.change, 'focusin': field.focusin},
+            textInput: field.value" id="e-mail" name="e-mail" type="email" autocomplete="">
+    <!-- /ko -->
+
+    <!-- ko if: field.count --><!-- /ko -->
+
+    <!-- ko if: field.value() -->
+    <a data-bind="
+        visible: field._type === 'password',
+        click:field.changeShowText" class="input-field-action" href="#" style="display: none;">
+    <span data-bind="
+            translation: 'common_show',
+            visible: !field.showText()" style="display: none;">Показать</span>
+    <span data-bind="
+            translation: 'common_hide',
+            visible: field.showText()">Скрыть</span>
+    </a>
+    <!-- /ko -->
+    <!-- ko if: field.errorShow -->
+        <!-- ko if: field.errorHtml -->
+            <p class="form-field-note" data-bind="css: { 'focus-on-error-field': field.focusOnError }, html: field.error">Логин или пароль содержит ошибки</p>
+        <!-- /ko -->
+        <!-- ko if: !field.errorHtml --><!-- /ko -->
+    <!-- /ko -->
+    <!-- ko if: field.recoveryShow --><!-- /ko -->
+    <!-- ko if: field.commentShow --><!-- /ko -->
+</div>
+<!-- /ko -->
+            <!--  ko component:{
+                   name: 'text',
+                   params: {
+                       value: loginForm.data.password,
+                       title: l10n.getTranslation('common_password'),
+                       label: l10n.getTranslation('common_password_enter'),
+                       name: 'password',
+                       type: 'password',
+                       recovery: true,
+                       recoveryLink: isCourses ? '/courses/signin-reset' : '/signin-reset',
+                       error: loginForm.errors.password,
+                       onFocusoutCallback: loginForm.checkField
+                   }
+               } --><div class="input-field form-field is-charged is-valid" data-bind="
+        css: {
+            'form-field': !field.noff,
+            'is-invalid': field.error,
+            'is-charged': field.value,
+            'big-size': params.big,
+            'long-error': !ignoreLongError &amp;&amp; field.error() &amp;&amp; field.error().length > 50
+        },
+        focusOutCheck: {
+            field: field
+        }">
+    <label class="name-field" data-bind="text: field.title, attr:{'for': field.name }" for="password">Пароль</label>
+    <label class="helper-field" data-bind="text: field.label, attr:{'for': field.name }" for="password">Введите пароль</label>
+    <!-- ko if: field.hint() --><!-- /ko -->
+    <!-- ko if: field.type() === 'password' -->
+        <input type="password" data-bind="
+            attr:{'id': field.name,
+                  'name': field.name,
+                  'readonly': field.readonly() ? 'readonly' : null,
+                  'autocomplete': params.withoutAutoFill ? 'off' : ''},
+            event:{'keypress':field.keypress, 'keyup':field.keyup},
+            textInput: field.value" id="password" name="password" autocomplete="">
+    <!-- /ko -->
+    <!-- ko if: field.type() !== 'password' --><!-- /ko -->
+
+    <!-- ko if: field.count --><!-- /ko -->
+
+    <!-- ko if: field.value() -->
+    <a data-bind="
+        visible: field._type === 'password',
+        click:field.changeShowText" class="input-field-action" href="#">
+    <span data-bind="
+            translation: 'common_show',
+            visible: !field.showText()">Показать</span>
+    <span data-bind="
+            translation: 'common_hide',
+            visible: field.showText()" style="display: none;">Скрыть</span>
+    </a>
+    <!-- /ko -->
+    <!-- ko if: field.errorShow --><!-- /ko -->
+    <!-- ko if: field.recoveryShow -->
+    <p class="form-field-note recovery-field">
+        <span data-bind="translation: 'recovery_question'">Забыли пароль?</span>
+        <!-- ko if: field.recoveryFunc --><!-- /ko -->
+
+        <!-- ko if: !field.recoveryFunc -->
+            <a data-link="" data-bind="translation: 'common_restore', attr: { href: field.recoveryLink }" href="/signin-reset">Восстановить</a>
+        <!-- /ko -->
+    </p>
+    <!-- /ko -->
+    <!-- ko if: field.commentShow --><!-- /ko -->
+</div>
+<!-- /ko -->
+            <div style="margin-top: 40px;" class="form-field">
+                <!-- ko component: {
+                    name: 'button-default',
+                    params:{
+                        textKey: 'signin_action_f2',
+                        click: loginForm.send,
+                        success: true,
+                        inProcess: 1
+                    }
+                } --><button data-bind="bindings:{bindings:bindings}, disable: disabled, click:click" class="wbt2 success wbt2-default">
+    <!-- ko if: icon --><!-- /ko -->
+    <span data-bind="text: text">Войти</span>
+</button><!-- /ko -->
+
+                    <!-- ko component: {
+                        name: 'checkable',
+                        params: {
+                            type: 'checkbox',
+                            value: loginForm.data.rememberMe,
+                            data: {
+                                inputValue: 'rememberMe',
+                                inputLabel: l10n.getTranslation('signin_remember')
+                            },
+                            view: 'inline'
+                        }
+                    } --><div class="checkable checkable-inline" data-bind="
+    checkable: $data,
+    css: viewClass
+"><label class="checkable-row"><div class="checkable-text">Запомнить меня</div><div class="checkable-input"><div class="jq-checkbox checked" unselectable="on" style="user-select: none; display: inline-block; position: relative; overflow: hidden;"><input type="checkbox" name="checkable-s99r" value="rememberMe" style="width: 0px; position: absolute; z-index: -1; opacity: 0; margin: 0px; padding: 0px;"><div class="jq-checkbox__div"></div></div></div></label></div>
+<!-- /ko -->
+            </div>
+        </form>
+    </div>
+    <div class="signin-footer">
+    </div>
+</div><!-- /ko -->
+  <!-- /ko -->
+  <div class="snackbar-wrapper"></div>
+  <!-- /ko -->
+
+  <!-- ko if: router.errorPage --><!-- /ko -->
+  <div class="modalContainer" id="modalContainer"></div></div><div class="koRoot"><div class="modal-backdrop in" style="overflow-y: scroll; display: none;"></div></div></body></html>
